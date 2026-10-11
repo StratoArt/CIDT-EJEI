@@ -6,3 +6,5 @@ function dose(){let r=n('rate'),a=n('area'),v=n('volume');document.getElementByI
 function roi(){let revenue=n('gain')*n('price'),extra=n('packCost')-n('farmCost');document.getElementById('revenue').textContent='Rp '+fmt(revenue);document.getElementById('net').textContent='Selisih biaya: Rp '+fmt(extra)+' · Simulasi setelah selisih biaya: Rp '+fmt(revenue-extra)}
 ['rate','area','volume'].forEach(id=>document.getElementById(id).addEventListener('input',dose));['gain','price','packCost','farmCost'].forEach(id=>document.getElementById(id).addEventListener('input',roi));dose();roi();
 const toggle=document.getElementById('menuToggle'),links=document.getElementById('navLinks');toggle.addEventListener('click',()=>links.classList.toggle('open'));links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+
+// OPT categories and individual field-guide entries use native accessible details/summary elements.

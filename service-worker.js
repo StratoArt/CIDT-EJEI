@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rice-handbook-2026-mobile-v2';
+const CACHE_NAME = 'rice-handbook-2026-mobile-v4-opt-categories';
 const APP_SHELL = [
   '/',
   '/index.html',
@@ -10,6 +10,10 @@ const APP_SHELL = [
   '/assets/crop-phenology.webp',
   '/assets/lindungi-diri.webp',
   '/assets/stewardship.webp',
+  '/assets/penggerek-batang.webp',
+  '/assets/pelipat-daun.webp',
+  '/assets/penyakit.webp',
+  '/assets/gulma.webp',
   '/assets/bayer-logo-white.svg',
   '/icons/icon-192.png',
   '/icons/icon-512.png',
