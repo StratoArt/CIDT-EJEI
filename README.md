@@ -1,6 +1,13 @@
-# Rice Handbook 2026 — OPT category update
+# Rice Handbook 2026 — Vayego Scientific Names Update
 
-Update ini menambahkan kategori Identifikasi OPT yang dapat dibuka/tutup: Hama, Penyakit, dan Gulma. Tidak ada fitur pencarian. Materi gambar berasal dari file yang diberikan pengguna.
+Update based on the latest Mobile Nav / Package Spacing Fix build.
 
-## Update repository
-Salin isi ZIP ini ke root repository `CIDT-EJEI`, timpa file lama, lalu jalankan `git add .`, `git commit`, dan `git push`.
+Changes:
+- Added original product packshots for Council Complete, Vayego, Nativo, Antracol, Folicur Gold, and Ambition.
+- Updated Vayego target list with scientific names: *Scirpophaga innotata*, *Scirpophaga incertulas*, and *Cnaphalocrocis medinalis*.
+- Bumped the service-worker cache name so installed PWAs can fetch the updated shell.
+
+Replace the project files with the contents of `ricefix/` or copy the folder contents into the repository root.
+
+
+Product detail update: added agreed handbook doses, formulation and mode-of-action summaries, rice OPT notes, source links, and Vayego scientific names. Please verify local registered label before field use.
