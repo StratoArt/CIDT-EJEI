@@ -1,7 +1,18 @@
 (() => {
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
-    window.addEventListener('load', () => navigator.serviceWorker.register('/service-worker.js').catch(err => console.warn('Service worker registration failed:', err)));
+    window.addEventListener('load', async () => {
+      try {
+        const registration = await navigator.serviceWorker.register('/service-worker.js', {
+          updateViaCache: 'none'
+        });
+        // Check for a newer worker whenever the app opens.
+        await registration.update();
+      } catch (err) {
+        console.warn('Service worker registration/update failed:', err);
+      }
+    });
   }
+
   const installButton = document.getElementById('installApp');
   let installPrompt;
   if (!installButton) return;
@@ -20,5 +31,8 @@
     installPrompt = null;
     installButton.hidden = true;
   });
-  window.addEventListener('appinstalled', () => { installButton.hidden = true; installButton.textContent = 'Aplikasi terpasang ✓'; });
+  window.addEventListener('appinstalled', () => {
+    installButton.hidden = true;
+    installButton.textContent = 'Aplikasi terpasang ✓';
+  });
 })();
