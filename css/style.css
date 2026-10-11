@@ -34,3 +34,24 @@
 .package-grid{display:grid;grid-template-columns:1fr;gap:16px}.package-grid .package{height:100%;align-content:start}.package-bobot{background:linear-gradient(120deg,#07516b,#07869c)}.package-caution{border-left:3px solid var(--green);padding:10px 12px;background:#ffffff12;border-radius:0 9px 9px 0}.quick-nav a{min-width:0}.quick-nav span{overflow-wrap:anywhere}
 @media(min-width:900px){.package-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:680px){.quick-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.quick-nav a,.quick-nav a:last-child{min-height:88px;padding:13px;grid-column:auto;grid-template-columns:1fr auto;align-content:space-between}.quick-nav a span,.quick-nav a:last-child span{grid-column:1/2;font-size:12px}.quick-nav a i,.quick-nav a:last-child i{grid-column:2;grid-row:2}.package-grid{grid-template-columns:1fr;gap:12px}.package-grid .package{padding:20px}.package h3{font-size:clamp(27px,8vw,32px)}.package-stats{gap:7px}}
+
+
+/* Final mobile layout correction: equal navigation cards and clear package spacing */
+@media(max-width:680px){
+  .quick-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .quick-nav>a,.quick-nav>a:last-child{
+    min-height:104px;height:104px;padding:15px;
+    grid-column:auto;grid-template-columns:minmax(0,1fr) auto;
+    grid-template-rows:auto auto;align-content:space-between;align-items:end;
+  }
+  .quick-nav>a>b{grid-column:1/-1;grid-row:1;font-size:23px;line-height:1}
+  .quick-nav>a>span,.quick-nav>a:last-child>span{grid-column:1;grid-row:2;font-size:13px;line-height:1.25}
+  .quick-nav>a>i,.quick-nav>a:last-child>i{grid-column:2;grid-row:2;align-self:end;font-size:18px}
+  .package-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+  .package-grid>.package{margin:0;min-width:0}
+  .package-grid>.package+.package{margin-top:0}
+}
+@media(min-width:681px){
+  .quick-nav{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .quick-nav>a:last-child{grid-column:auto}
+}
